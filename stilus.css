@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: 
+        "n n n n n"
+        "a a a a s"
+        "f f f f f";
+}
+
+nav {
+    grid-area: n;
+}
+
+article {
+    grid-area: a;
+}
+
+aside {
+    grid-area: s;
+}
+
+footer {
+    grid-area: f;
+}
+
+/* Felépítés */
+body{
+    background-color: beige;
+}
+
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+aside{
+    background-color: white;
+    height: 500px;
+}
+
+aside h3{
+    font-weight: bold;
+}
+
+footer{
+    margin-top: 15px;
+    background-color: rgb(63, 83, 31);
+    color: white;
+    text-align: center;
+}
+
+
+/* Menü */
+header{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+nav li {
+    list-style: none
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(63, 83, 31);
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Képek */
+.targy h3{
+    text-align: center;
+}
+
+.ar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+button{
+
+}
+
+img{
+    width: 200px;
+}
+
+/* Telefon */
+@media only screen and (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+
+    main {
+        font-size: 12px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "n"
+            "s"
+            "a"
+            "f";
+    }
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        list-style: none;
+        text-align: center;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    aside{
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        height: 100px;
+    }
+}
